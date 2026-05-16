@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Feats</title>
+        <meta name="description" content="Keep track of your bicycle rides and planned routes" />
+        <link
+            rel="shortcut icon"
+            href="./assets/logo.png"
+            type="image/x-icon"
+        />
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:title" content="Feats" />
+        <meta property="og:description" content="Keep track of your bicycle rides and planned routes" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://github.com/robvans66/feats" />
+        <!--Replace with the current website url-->
+        <meta property="og:image" content="" />
+
+        <link rel="stylesheet" href="css/tailwind-runtime.css">
+        <!-- <link rel="stylesheet" href="./css/tailwind-build.css" /> -->
+        <link rel="stylesheet" href="css/index.css" />
+
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
+            integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+    </head>
+    <body class="tw-flex tw-min-h-[100vh] tw-flex-col tw-bg-[#fff]">
+        <header
+            class="tw-absolute tw-top-0 tw-z-20 tw-flex tw-h-[60px] tw-w-full tw-bg-opacity-0 tw-px-[5%] max-lg:tw-mr-auto max-lg:tw-px-4 lg:tw-justify-around"
+        >
+            <a class="tw-h-[50px] tw-w-[50px] tw-p-[4px]" href="">
+                <img
+                    src="./assets/logo.png"
+                    alt="logo"
+                    class="tw-object tw-h-full tw-w-full"
+                />
+            </a>
+            <div
+                class="collapsible-header animated-collapse max-lg:tw-shadow-md"
+                id="collapsed-header-items"
+            >
+                <div
+                    class="tw-flex tw-h-full tw-w-max tw-gap-5 tw-text-base tw-text-black max-lg:tw-mt-[30px] max-lg:tw-flex-col max-lg:tw-place-items-end max-lg:tw-gap-5 lg:tw-mx-auto lg:tw-place-items-center"
+                >
+                    <a class="header-links" href="#what-is-feats"> What is Feats? </a>
+                    <a class="header-links" href="#download"> Download </a>
+                    <a class="header-links" href="#features"> Features </a>
+                    <a class="header-links" href="#screenshots"> Screenshots </a>
+                    <a class="header-links" href="#more"> More </a>
+                </div>
+                <div
+                    class="tw-mx-4 tw-flex tw-place-items-center tw-gap-[20px] tw-text-base max-md:tw-w-full max-md:tw-flex-col max-md:tw-place-content-center"
+                >
+                </div>
+            </div>
+            <button
+                class="bi bi-list tw-absolute tw-right-3 tw-top-3 tw-z-50 tw-text-3xl tw-text-black lg:tw-hidden"
+                onclick="toggleHeader()"
+                aria-label="menu"
+                id="collapse-btn"
+            ></button>
+        </header>
+
+        <section
+            class="tw-relative tw-flex tw-min-h-[100vh] tw-w-full tw-max-w-[100vw] tw-flex-col tw-overflow-hidden max-lg:tw-p-4 max-md:tw-mt-[50px]"
+        >
+            <div
+                class="tw-flex tw-h-full tw-min-h-[100vh] tw-w-full tw-place-content-center tw-gap-6 tw-p-[5%] max-xl:tw-place-items-center max-lg:tw-flex-col"
+            >
+                <div class="tw-flex tw-flex-col tw-place-content-center">
+                    <div
+                        class="tw-text-6xl tw-font-semibold tw-lowercase tw-leading-[80px] max-lg:tw-text-4xl max-md:tw-leading-snug"
+                    >
+                        <span class="tw-text-primary"> feats </span>
+
+                    </div>
+                    <div class="tw-mt-2 tw-flex tw-gap-3 tw-text-xl max-lg:tw-text-lg">
+                    </div>
+                    <div
+                        class="tw-mt-10 tw-max-w-[450px] tw-p-2 tw-text-justify max-lg:tw-max-w-full"
+                    >
+                        Keep track of your completed bicycle rides and your planned routes and get insights on your riding habits and performance. Feats is a simple and intuitive desktop app that helps you stay motivated and achieve your cycling goals.
+                        <br />
+                        <br />
+                        <span id="download"></span>Get started right away and download Feats for Apple or Windows (<i>not yet available</i>), or scroll down to learn more about the app.</span>
+                    </div>
+                    <div
+                        class="tw-mt-4 tw-flex tw-place-items-center tw-gap-4 tw-overflow-hidden tw-p-2"
+                    >
+                        <a
+                            class="btn tw-transition-transform tw-py-2 tw-duration-[0.3s] hover:tw-scale-x-[1.03] tw-gap-2"
+                            href="https://github.com/robvans66/feats/releases/download/v1.2.0/Feats-1.2.0-arm64.dmg"
+                        >
+                            <span>Download</span>
+                            <i class="bi bi-apple"></i>
+                        </a>
+                        <a
+                            class="btn tw-py-2 tw-gap-2 tw-opacity-30 tw-pointer-events-none"
+                            aria-disabled="true" 
+                        >
+                            <span>Download</span>
+                            <i class="bi bi-windows"></i>
+                        </a>
+                            <i class="bi bi-pc-display-horizontal"></i> Desktop only
+                    </div>
+                    <div class="tw-mt-4 tw-flex tw-place-items-center tw-gap-4 tw-overflow-hidden tw-p-2">
+                    <span><i class="bi bi-star-fill tw-text-primary"></i> Latest version: v1.2.0 <br /><i class="bi bi-apple tw-text-primary"></i> Ready-to-install macOS disk image for Apple Silicon (signed & verified by Apple).<br />
+                    <i class="bi bi-windows tw-text-primary"></i> Windows version will be added soon.</span>
+                    </div>
+                </div>
+                <div
+                    class="tw-flex tw-w-full tw-max-w-[50%] tw-place-content-center tw-place-items-center tw-overflow-hidden max-lg:tw-max-w-[unset]"
+                >
+                    <div
+                        class="tw-flex tw-max-h-[580px] tw-min-h-[450px] tw-min-w-[350px] tw-max-w-[650px] tw-overflow-hidden max-lg:tw-h-fit max-lg:tw-max-h-[320px] max-lg:tw-min-h-[180px] max-lg:tw-w-[320px] max-lg:tw-min-w-[320px]"
+                    >
+                        <img
+                            src="./assets/images/screenshots/feats_screenshot_1.png"
+                            alt="app"
+                            class="tw-h-full tw-w-full tw-object-contain"
+                        />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section
+            class="tw-mt-5 tw-flex tw-w-full tw-flex-col tw-place-items-center tw-p-[2%]"
+            id="what-is-feats">
+            
+            <h2 class="tw-text-4xl tw-text-primary tw-font-semibold">What is Feats?</h2>
+        
+            <div class="tw-mt-10 tw-max-w-[650px] tw-p-2 tw-text-justify max-lg:tw-max-w-full">
+                Feats is a lightweight, free-to-use desktop app for keeping track of your completed bicycle rides and planned routes.
+                <br /><br />
+                It's not intended to be a full-featured app, but rather a simple and easy-to-use tool. Feats is particularly practical if you use multiple cycling platforms and have a lot of previously unusable legacy data, and want to see all your rides and routes in one place. It's also useful if you don't use any platform at all and just want a simple way to keep track of your rides and routes.
+                <br /><br />
+                The extensive use of charts and statistics provides insights into your riding habits and achievements.
+                <br /><br />
+                Feats is by no means a replacement for existing bicycle platforms. It is not a navigation or training app and not a social app, but rather a personal diary and statistics tool for your rides and routes. Everything is stored locally on your device.
+            </div>
+        </section>
+
+        <section
+            class="tw-relative tw-flex tw-w-full tw-max-w-[100vw] tw-flex-col tw-place-content-center tw-place-items-center tw-overflow-hidden tw-p-6"
+            id="features"
+        >
+            <div
+                class="tw-mt-8 tw-flex tw-flex-col tw-place-items-center tw-gap-5"
+            >
+                <div
+                    class="tw-mt-5 tw-flex tw-flex-col tw-gap-3 tw-text-center"
+                >
+                    <h2 class="tw-text-4xl tw-font-semibold">Features</h2>
+                </div>
+                <div
+                    class="tw-mt-6 tw-flex tw-max-w-[60%] tw-flex-wrap tw-place-content-center tw-gap-2 max-lg:tw-flex-col"
+                >
+                    <div
+                        class="tw-flex tw-h-[250px] tw-w-[350px] tw-flex-col tw-gap-2 tw-p-4 tw-text-center"
+                    >  
+                        <i
+                            class="bi bi-ui-checks tw-text-5xl tw-text-primary"
+                        ></i>
+                        <h3 class="tw-text-2xl tw-font-semibold">Forms</h3>
+                        <div class="tw-text-[#595959]">
+                            Simple forms make it easy to enter your data.
+                        </div>
+                    </div>
+                    <div
+                        class="tw-flex tw-h-[250px] tw-w-[350px] tw-flex-col tw-gap-2 tw-p-4 tw-text-center"
+                    >
+                        <i
+                            class="bi bi-database-fill-check tw-text-5xl tw-text-primary"
+                        ></i>
+                        <h3 class="tw-text-2xl tw-font-semibold">Database</h3>
+                        <div class="tw-text-[#595959]">
+                            All information is stored locally on your device in a high-performance database.
+                        </div>
+                    </div>
+                    <div
+                        class="tw-flex tw-h-[250px] tw-w-[350px] tw-flex-col tw-gap-2 tw-p-4 tw-text-center"
+                    >
+                        <i
+                            class="bi bi-sliders2-vertical tw-text-5xl tw-text-primary"
+                        ></i>
+                        <h3 class="tw-text-2xl tw-font-semibold">Settings</h3>
+                        <div class="tw-text-[#595959]">
+                            Customize the look and feel of the app in settings.
+                        </div>
+                    </div>
+                    <div
+                        class="tw-flex tw-h-[250px] tw-w-[350px] tw-flex-col tw-gap-2 tw-p-4 tw-text-center"
+                    >
+                        <i
+                            class="bi bi-book-fill tw-text-5xl tw-text-primary"
+                        ></i>
+                        <h3 class="tw-text-2xl tw-font-semibold">Documentation</h3>
+                        <div class="tw-text-[#595959]">
+                            Quickly get up to speed with the in-app documentation.
+                        </div>
+                    </div>
+                    <div
+                        class="tw-flex tw-h-[250px] tw-w-[350px] tw-flex-col tw-gap-2 tw-p-4 tw-text-center"
+                    >
+                        <i
+                            class="bi bi-bar-chart-fill tw-text-5xl tw-text-primary"
+                        ></i>
+                        <h3 class="tw-text-2xl tw-font-semibold">Statistics</h3>
+                        <div class="tw-text-[#595959]">
+                            See detailed stats about your rides in clear charts and tables.
+                        </div>
+                    </div>
+                    <div
+                        class="tw-flex tw-h-[250px] tw-w-[350px] tw-flex-col tw-gap-2 tw-p-4 tw-text-center"
+                    >
+                        <i class="bi bi-wikipedia tw-text-5xl tw-text-primary"></i>
+                        <h3 class="tw-text-2xl tw-font-semibold">Wiki</h3>
+                        <div class="tw-text-[#595959]">
+                            A comprehensive <a href="https://github.com/robvans66/feats/wiki" target="_blank" class="wikilink">wiki</a> helps you get the most out of the app.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="tw-mt-5 tw-flex tw-w-full tw-flex-col tw-place-items-center tw-p-[2%]" id="screenshots">
+        
+            <h2 class="tw-text-4xl tw-text-primary tw-font-semibold">Screenshots</h2>
+
+            <div class=" tw-font-normal tw-text-primary max-md:tw-text-2xl">
+                <br />
+                (These screenshots are from a demo installation of the app with 1000 randomly generated bike rides.)
+            </div>
+
+            <div class="tw-mt-10 tw-max-w-[650px] tw-p-2 tw-text-justify max-lg:tw-max-w-full">
+
+                <img src="./assets/images/screenshots/feats_screenshot_1.png" alt="app" class="tw-h-full tw-w-full tw-object-contain" />
+
+                <img src="./assets/images/screenshots/feats_screenshot_2.png" alt="app" class="tw-h-full tw-w-full tw-object-contain" />
+
+                <img src="./assets/images/screenshots/feats_screenshot_3.png" alt="app" class="tw-h-full tw-w-full tw-object-contain" />
+
+                <img src="./assets/images/screenshots/feats_screenshot_4.png" alt="app" class="tw-h-full tw-w-full tw-object-contain" />
+
+                <img src="./assets/images/screenshots/feats_screenshot_5.png" alt="app" class="tw-h-full tw-w-full tw-object-contain" />
+
+            </div>
+        </section>
+
+        <section class="tw-mt-5 tw-flex tw-w-full tw-flex-col tw-place-items-center tw-p-[2%]" id="more">
+        
+            <h2 class="tw-text-4xl tw-text-primary tw-font-semibold">More</h2>
+        
+            <div class="tw-mt-10 tw-max-w-[650px] tw-p-2 tw-text-justify max-lg:tw-max-w-full">
+                <ul class="disc">
+                    <li>Feats repository with source code on GitHub <a href="https://github.com/robvans66/feats" target="_blank"><i class="bi bi-box-arrow-up-right"></i></a></li>
+                </ul>
+            </div>
+
+        </section>
+
+        <footer
+            class="tw-mt-auto tw-flex tw-w-full tw-place-content-around tw-gap-3 tw-p-[5%] tw-px-[10%] tw-text-black max-md:tw-flex-col"
+        >
+        </footer>
+    </body>
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"
+        integrity="sha512-B1lby8cGcAUU3GR+Fd809/ZxgHbfwJMp0jLTVfHiArTuUt++VqSlJpaJvhNtRf3NERaxDNmmxkdx2o+aHd4bvw=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    ></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollTrigger.min.js"
+        integrity="sha512-AY2+JxnBETJ0wcXnLPCcZJIJx0eimyhz3OJ55k2Jx4RtYC+XdIi2VtJQ+tP3BaTst4otlGG1TtPJ9fKrAUnRdQ=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="./index.js"></script>
+</html>

@@ -197,3 +197,7 @@ a.wikilink {
 ul.disc {
   list-style-type: disc;
 }
+
+p-fts {
+  margin-bottom: 10px;
+}

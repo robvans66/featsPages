@@ -836,6 +836,10 @@ video {
   line-height: 1.75rem;
 }
 
+.tw-font-normal {
+  font-weight: 400;
+}
+
 .tw-font-semibold {
   font-weight: 600;
 }
@@ -983,6 +987,11 @@ video {
 
   .max-md\:tw-place-content-center {
     place-content: center;
+  }
+
+  .max-md\:tw-text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 
   .max-md\:tw-leading-snug {

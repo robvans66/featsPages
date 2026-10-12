@@ -86,3 +86,49 @@ numberTimeline.fromTo("#numbers-container", {
         innerText: 1
     }
 }, "<")
+
+
+/**
+ * Screenshots lightbox
+ */
+
+const screenshotImgs = Array.from(document.querySelectorAll("#screenshots-gallery img"))
+const lightbox = document.getElementById("lightbox")
+const lightboxImg = document.getElementById("lightbox-img")
+let currentScreenshotIndex = 0
+
+function openLightbox(index) {
+    currentScreenshotIndex = index
+    lightboxImg.src = screenshotImgs[index].src
+    lightbox.hidden = false
+    document.body.style.overflow = "hidden"
+}
+
+function closeLightbox() {
+    lightbox.hidden = true
+    document.body.style.overflow = ""
+}
+
+function navigateLightbox(direction) {
+    currentScreenshotIndex = (currentScreenshotIndex + direction + screenshotImgs.length) % screenshotImgs.length
+    lightboxImg.src = screenshotImgs[currentScreenshotIndex].src
+}
+
+screenshotImgs.forEach((img, index) => {
+    img.addEventListener("click", () => openLightbox(index))
+})
+
+document.getElementById("lightbox-close").addEventListener("click", closeLightbox)
+document.getElementById("lightbox-prev").addEventListener("click", () => navigateLightbox(-1))
+document.getElementById("lightbox-next").addEventListener("click", () => navigateLightbox(1))
+
+lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) closeLightbox()
+})
+
+window.addEventListener("keydown", (e) => {
+    if (lightbox.hidden) return
+    if (e.key === "Escape") closeLightbox()
+    if (e.key === "ArrowLeft") navigateLightbox(-1)
+    if (e.key === "ArrowRight") navigateLightbox(1)
+})
